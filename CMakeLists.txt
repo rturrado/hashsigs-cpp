@@ -39,7 +39,6 @@ FetchContent_Declare(
     GIT_TAG 407c905e45ad75fc29bf0f9bb7c5c2fd3475976f)  # 12.1.0
 FetchContent_MakeAvailable(fmt)
 
-
 ################
 # Library target
 ################
@@ -62,7 +61,7 @@ target_link_libraries(hashsigs PRIVATE
 # CLI tool
 ##########
 add_executable(hashsigs_cli
-    src/hashsigs_cli.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/hashsigs_cli.cpp
 )
 
 target_link_libraries(hashsigs_cli PRIVATE

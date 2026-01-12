@@ -71,7 +71,7 @@ GTEST_COLOR=1 ./build/bin/hashsigs_tests --gtest_color=yes
 ├── src/          # Implementation files
 │   ├── keccak.cpp
 │   └── wotsplus.cpp
-└── tests/        # Test vectors and unit tests
+└── tests/        # Unit tests
     ├── wotsplus_test.cpp
 ```
 
