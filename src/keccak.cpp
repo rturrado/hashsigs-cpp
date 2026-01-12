@@ -4,7 +4,7 @@
 // see http://create.stephan-brumme.com/disclaimer.html
 //
 
-#include "keccak.h"
+#include "hashsigs-cpp/keccak.h"
 
 // Cross-platform endianness detection
 #if defined(__APPLE__)

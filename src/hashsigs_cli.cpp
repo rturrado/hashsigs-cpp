@@ -1,5 +1,7 @@
-#include "../include/keccak.h"
-#include "../include/wotsplus.hpp"
+#include "hashsigs-cpp/keccak.h"
+#include "hashsigs-cpp/wotsplus.hpp"
+
+#include <algorithm>
 #include <array>
 #include <iomanip>
 #include <iostream>

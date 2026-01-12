@@ -1,5 +1,8 @@
-#include "keccak.h"
-#include "wotsplus.hpp"
+#include "hashsigs-cpp/keccak.h"
+#include "hashsigs-cpp/resources.hpp"
+#include "hashsigs-cpp/wotsplus.hpp"
+
+#include <filesystem>
 #include <fstream>
 #include <gtest/gtest.h>
 #include <iomanip>
@@ -145,7 +148,9 @@ TEST(WOTSPlusTest, VerifyValidSignatureWithRandomizationElements) {
 }
 
 TEST(WOTSPlusTest, Keccak256TestVectors) {
-  std::ifstream f("wotsplus_keccak256.json");
+  std::filesystem::path vectors_file_path{
+    res::resources_folder_path / "vectors" / "wotsplus_keccak256.json" };
+  std::ifstream f{ vectors_file_path };
   json data = json::parse(f);
 
   WOTSPlus wots(keccak256);

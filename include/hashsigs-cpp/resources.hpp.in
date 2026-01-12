@@ -1,0 +1,7 @@
+#include <filesystem>
+
+namespace res {
+
+static const std::filesystem::path resources_folder_path = "@RESOURCES_FOLDER_PATH@";
+
+}

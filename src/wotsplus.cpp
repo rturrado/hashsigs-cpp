@@ -1,5 +1,6 @@
-#include "wotsplus.hpp"
-#include "constants.hpp"
+#include "hashsigs-cpp/wotsplus.hpp"
+#include "hashsigs-cpp/constants.hpp"
+
 #include <algorithm>
 #include <cmath>
 #include <iostream>
