@@ -24,6 +24,15 @@ make
 
 ## Testing
 
+Tests are built by default. To build the library without tests:
+
+```bash
+mkdir build
+cd build
+cmake -DBUILD_TESTS=OFF ..
+make
+```
+
 Run all tests:
 
 ```bash
@@ -34,13 +43,13 @@ make test
 Or run the test executable directly:
 
 ```bash
-./tests/wotsplus_test
+./build/bin/hashsigs_tests
 ```
 
 For test output and backtrace:
 
 ```bash
-GTEST_COLOR=1 ./tests/wotsplus_test --gtest_color=yes
+GTEST_COLOR=1 ./build/bin/hashsigs_tests --gtest_color=yes
 ```
 
 ## Development Requirements
@@ -48,7 +57,6 @@ GTEST_COLOR=1 ./tests/wotsplus_test --gtest_color=yes
 - CMake 3.10 or higher
 - C++17 or higher
 - Google Test
-- nlohmann/json
 
 ## Project Structure
 
@@ -58,12 +66,13 @@ GTEST_COLOR=1 ./tests/wotsplus_test --gtest_color=yes
 │   ├── constants.hpp
 │   ├── public_key.hpp
 │   └── wotsplus.hpp
+├── res/          # Resource files
+    └── vectors/
 ├── src/          # Implementation files
 │   ├── keccak.cpp
 │   └── wotsplus.cpp
 └── tests/        # Test vectors and unit tests
     ├── wotsplus_test.cpp
-    └── test_vectors/
 ```
 
 ## License
